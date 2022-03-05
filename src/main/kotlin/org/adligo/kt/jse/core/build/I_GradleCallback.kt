@@ -1,3 +1,5 @@
+package org.adligo.kt.jse.core.build
+
 import org.gradle.api.artifacts.Dependency
 import org.gradle.api.Project
 

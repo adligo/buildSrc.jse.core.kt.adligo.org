@@ -1,6 +1,7 @@
 package org.adligo.kt.jse.core.build
 
 import org.gradle.api.Project
+import org.gradle.api.artifacts.Dependency
 import org.gradle.kotlin.dsl.DependencyHandlerScope
 
 /**
@@ -29,12 +30,13 @@ import org.gradle.kotlin.dsl.DependencyHandlerScope
  * </code><pre>
  */
  
-object I_CtxDeps {
+object I_Ctx4JseDeps {
 
-  /**
-  * provides a way for other projects to depend on i_ctx
-  */
-  fun dependsOnI_Ctx(gc : I_GradleCallback) {
-    gc.implementation(gc.projectFun("i_ctx.adligo.org"))
+  fun dependsOnI_Ctx4Jse(gcb: I_GradleCallback) {
+    println("gcp is " + gcb)
+    println("entry is \n" + gcb.toString())
+    println("${gcb::class.qualifiedName}")
+    I_CtxDeps.dependsOnI_Ctx(gcb)
+    gcb.implementation(gcb.projectFun("i_ctx4jse.adligo.org"))
   }
 }
