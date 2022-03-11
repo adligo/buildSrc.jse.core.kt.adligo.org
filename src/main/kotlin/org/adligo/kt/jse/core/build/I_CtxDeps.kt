@@ -34,7 +34,7 @@ object I_CtxDeps {
   /**
   * provides a way for other projects to depend on i_ctx
   */
-  fun dependsOnI_Ctx(gc : I_GradleCallback) {
-    gc.implementation(gc.projectFun("i_ctx.adligo.org"))
+  fun dependsOnI_Ctx(gradleCallback : I_GradleCallback) {
+    gradleCallback.implementation(gradleCallback.projectFun("i_ctx.adligo.org"))
   }
 }

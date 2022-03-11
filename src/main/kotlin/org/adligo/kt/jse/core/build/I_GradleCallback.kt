@@ -29,8 +29,23 @@ import org.gradle.api.Project
  */
  
 interface I_GradleCallback {
+  /**
+   *
+   */
   fun implementation(dependencyNotation: String)
+  /**
+   *
+   */
   fun implementation(dependency: Dependency)
+
+  /**
+   *
+   */
   fun implementation(project: Project)
+
+  /**
+   * This was originally a call to a function called project
+   * in a build.gradle.kts file
+   */
   fun projectFun(projectName: String): Project
 }

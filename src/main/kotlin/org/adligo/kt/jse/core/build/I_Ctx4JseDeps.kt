@@ -32,11 +32,16 @@ import org.gradle.kotlin.dsl.DependencyHandlerScope
  
 object I_Ctx4JseDeps {
 
-  fun dependsOnI_Ctx4Jse(gcb: I_GradleCallback) {
-    println("gcp is " + gcb)
-    println("entry is \n" + gcb.toString())
-    println("${gcb::class.qualifiedName}")
-    I_CtxDeps.dependsOnI_Ctx(gcb)
-    gcb.implementation(gcb.projectFun("i_ctx4jse.adligo.org"))
+  fun dependsOnI_Ctx4Jse(gradleCallback: I_GradleCallback) {
+    //println("gradleCallback is " + gradleCallback)
+    //println("entry is \n" + gradleCallback.toString())
+    //println("${gradleCallback::class.qualifiedName}")
+    has(gradleCallback)
+    gradleCallback.implementation(gradleCallback.projectFun("i_ctx4jse.adligo.org"))
+  }
+  
+    
+  fun has(gradleCallback : I_GradleCallback) {
+    I_CtxDeps.dependsOnI_Ctx(gradleCallback)
   }
 }
