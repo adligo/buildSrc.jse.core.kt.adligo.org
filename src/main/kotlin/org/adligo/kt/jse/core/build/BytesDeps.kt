@@ -39,6 +39,11 @@ object BytesDeps {
         gradleCallback.implementation(gradleCallback.projectFun("bytes.adligo.org"))
     }
 
+    fun gwtExamplesHave(gradleCallback : I_GradleCallback) {
+        dependsOnBytes(gradleCallback)
+        GwtDeps.dependsOnGwt(gradleCallback)
+    }
+
     fun has(gradleCallback : I_GradleCallback) {
         gradleCallback.implementation(gradleCallback.projectFun("i_bytes.adligo.org"))
         I_CollectionsDeps.dependsOnI_Collections(gradleCallback)

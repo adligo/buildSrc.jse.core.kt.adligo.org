@@ -5,9 +5,9 @@ import org.gradle.kotlin.dsl.DependencyHandlerScope
 
 /**
  * This provides the dependencies for the
- * {@link <a href="https://github.com/adligo/ctx.adligo.org">ctx/a>
- * project and also exports the ability to depend on bytes with the function;<br/>
- * dependsOnCtx
+ * {@link <a href="https://github.com/adligo/mockto_ext.adligo.org">mockto_ext/a>
+ * project and also exports the ability to depend on mockto_ext with the function;<br/>
+ * dependsOnMockitoExt
  *
  * @author scott
  * <pre><code>
@@ -29,28 +29,22 @@ import org.gradle.kotlin.dsl.DependencyHandlerScope
  * </code><pre>
  */
 
-object CtxDeps {
+object Tests4jDeps {
 
     /**
      * provides a way for other projects to depend on i_ctx
      */
-    fun dependsOnCtx(gradleCallback : I_GradleCallback) {
+    fun dependsOnTests4j(gradleCallback : I_GradleCallback) {
         has(gradleCallback)
-        gradleCallback.implementation(gradleCallback.projectFun("ctx.adligo.org"))
-    }
-
-    fun gwtExamplesHave(gradleCallback : I_GradleCallback) {
-        dependsOnCtx(gradleCallback)
-        GwtDeps.dependsOnGwt(gradleCallback)
+        gradleCallback.implementation(gradleCallback.projectFun("tests4j.adligo.org"))
     }
 
     fun has(gradleCallback : I_GradleCallback) {
-        I_Ctx4JseDeps.dependsOnI_Ctx4Jse(gradleCallback)
-        I_Threads4JseDeps.dependsOnI_Threads4Jse(gradleCallback)
+        JaxbDeps.dependsOnJaxb(gradleCallback)
+        I_Tests4jDeps.dependsOnI_Tests4j(gradleCallback)
     }
 
     fun testsHave(gradleCallback : I_GradleCallback) {
-        dependsOnCtx(gradleCallback)
-        Tests4j4jjDeps.dependsOnTests4j4jj(gradleCallback)
+        dependsOnTests4j(gradleCallback)
     }
 }
