@@ -1,6 +1,5 @@
 # Compiled class file
 *.class
-build
 .gradle
 .settings
 
@@ -26,3 +25,4 @@ build
 hs_err_pid*
 /bin/
 /.classpath
+/.idea
