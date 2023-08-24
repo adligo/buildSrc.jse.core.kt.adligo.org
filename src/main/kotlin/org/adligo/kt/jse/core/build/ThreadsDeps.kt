@@ -31,8 +31,9 @@ object ThreadsDeps {
     /**
      * provides a way for other projects to depend on i_ctx
      */
-    fun dependsOnTests4j(gradleCallback : I_GradleCallback) {
+    fun dependsOnTests4j4jj(gradleCallback : I_GradleCallback) {
         has(gradleCallback)
+        Tests4j4jjDeps.dependsOnTests4j4jj(gradleCallback)
         gradleCallback.implementation(gradleCallback.projectFun("threads.adligo.org"))
     }
 
@@ -42,6 +43,6 @@ object ThreadsDeps {
     }
 
     fun testsHave(gradleCallback : I_GradleCallback) {
-        dependsOnTests4j(gradleCallback)
+        dependsOnTests4j4jj(gradleCallback)
     }
 }
