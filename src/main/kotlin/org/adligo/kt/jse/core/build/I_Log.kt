@@ -6,15 +6,14 @@ import org.gradle.kotlin.dsl.DependencyHandlerScope
 
 /**
  * This provides the dependencies for the 
- * {@link <a href="https://github.com/adligo/i_threads.adligo.org">i_threads</a>
- * project and also exports the ability to depend on i_threads with the function;<br/>
- * dependsOnI_Threads
+ * {@link <a href="https://github.com/adligo/i_log.adligo.org">i_log</a><br/>
+ * dependsOnI_Log
  *
  * @author scott
  * <pre><code>
  * ---------------- Apache ICENSE-2.0 --------------------------
  *
- * Copyright 2022 Adligo Inc
+ * Copyright 2023 Adligo Inc
  * 
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -30,10 +29,10 @@ import org.gradle.kotlin.dsl.DependencyHandlerScope
  * </code><pre>
  */
  
-object I_ThreadsDeps {
+object I_Log {
 
-  fun dependsOnI_Threads(gradleCallback: I_GradleCallback) {
-    gradleCallback.implementation(gradleCallback.projectFun("i_threads.adligo.org"))
+  fun dependsOnI_Log(gradleCallback: I_GradleCallback) {
+    gradleCallback.implementation(gradleCallback.projectFun("i_log.adligo.org"))
   }
 
 }
