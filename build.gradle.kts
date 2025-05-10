@@ -27,20 +27,16 @@
  * 
  *         <pre>
  */
-java {
-  toolchain {
-    languageVersion.set(JavaLanguageVersion.of(8))
-  }
+repositories {
+    mavenCentral()
+    google()
+    gradlePluginPortal()
 }
 
 plugins {
   eclipse
   java
   `kotlin-dsl`
-}
-
-repositories {
-    jcenter()
 }
 
 tasks.register<GradleBuild>("ecp") {

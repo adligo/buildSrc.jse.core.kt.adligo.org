@@ -5,7 +5,7 @@ import org.gradle.kotlin.dsl.DependencyHandlerScope
 
 /**
  * This provides the dependencies for the
- * {@link <a href="https://github.com/adligo/ten.adligo.org">ten/a>
+ * {@link <a href="https://github.com/adligo/ten64.adligo.org">ten/a>
  * project and also exports the ability to depend on bytes with the function;<br/>
  * dependsOnTen
  *
@@ -29,14 +29,14 @@ import org.gradle.kotlin.dsl.DependencyHandlerScope
  * </code><pre>
  */
 
-object TenDeps {
+object Ten64Deps {
 
     /**
      * provides a way for other projects to depend on i_ctx
      */
     fun dependsOnTen(gradleCallback : I_GradleCallback) {
         has(gradleCallback)
-        gradleCallback.implementation(gradleCallback.projectFun("ten.adligo.org"))
+        gradleCallback.implementation(gradleCallback.projectFun("ten64.adligo.org"))
     }
 
     fun gwtExamplesHave(gradleCallback : I_GradleCallback) {
