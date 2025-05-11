@@ -34,5 +34,6 @@ object JUnit5Deps {
   fun dependsOnJUnit5(gradleCallback : I_GradleCallback) {
     gradleCallback.implementation("org.junit.jupiter:junit-jupiter-api:5.8.2")
     gradleCallback.implementation("org.junit.jupiter:junit-jupiter-engine:5.8.2")
+    gradleCallback.implementation("org.junit.platform:junit-platform-console:1.9.3")
   }
 }
