@@ -36,6 +36,8 @@ object Tests4j4jjDeps {
      */
     fun dependsOnTests4j4jj(gradleCallback : I_GradleCallback) {
         has(gradleCallback)
+        gradleCallback.implementation(gradleCallback.projectFun("i_tests4j.adligo.org"))
+        gradleCallback.implementation(gradleCallback.projectFun("tests4j.adligo.org"))
         gradleCallback.implementation(gradleCallback.projectFun("tests4j4jj.adligo.org"))
     }
 
