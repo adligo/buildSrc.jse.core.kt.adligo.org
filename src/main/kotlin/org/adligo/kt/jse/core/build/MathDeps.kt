@@ -38,6 +38,8 @@ object MathDeps {
 
   fun has(gradleCallback : I_GradleCallback) {
     I_MathDeps.dependsOnI_Math(gradleCallback)
+    I_CollectionsDeps.dependsOnI_Collections(gradleCallback)
+  	CollectionsDeps.dependsOnCollections(gradleCallback)
   }
 
   fun testsHave(gradleCallback : I_GradleCallback) {
