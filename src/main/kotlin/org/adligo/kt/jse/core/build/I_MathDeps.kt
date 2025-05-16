@@ -38,4 +38,7 @@ object I_MathDeps {
         gradleCallback.implementation(gradleCallback.projectFun("i_math.adligo.org"))
     }
 
+    fun has(gradleCallback : I_GradleCallback) {
+        I_CollectionsDeps.dependsOnI_Collections(gradleCallback)
+    }
 }
