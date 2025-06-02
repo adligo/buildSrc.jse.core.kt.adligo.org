@@ -39,6 +39,6 @@ object I_Threads4JseDeps {
 
   fun has(gradleCallback: I_GradleCallback) {
     I_ThreadsDeps.dependsOnI_Threads(gradleCallback)
-    I_Log2.dependsOnI_Log2(gradleCallback)
+    I_Log2Deps.dependsOnI_Log2(gradleCallback)
   }
 }

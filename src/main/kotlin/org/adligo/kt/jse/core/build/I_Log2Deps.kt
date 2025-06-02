@@ -30,10 +30,14 @@ import org.gradle.kotlin.dsl.DependencyHandlerScope
  * </code><pre>
  */
  
-object I_Log2 {
+object I_Log2Deps {
 
   fun dependsOnI_Log2(gradleCallback: I_GradleCallback) {
     gradleCallback.implementation(gradleCallback.projectFun("i_log2.adligo.org"))
   }
 
+  fun testsHave(gradleCallback : I_GradleCallback) {
+    dependsOnI_Log2(gradleCallback)
+    Tests4j4jjDeps.dependsOnTests4j4jj(gradleCallback)
+  }
 }
